@@ -7,7 +7,7 @@
 
 Steps to do the project:
 1-define the variables:
-ossible_word_1="becode"
+possible_word_1="becode"
 possible_word_2='learning'
 possible_word_3='mathematics'
 possible_word_4='sessions'
