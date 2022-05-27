@@ -1,0 +1,112 @@
+import random
+lives=5
+wrongly_guessed_letters=[]
+will_gussed_letter=[]
+turn_count=0
+error_count=0
+word_to_find=[]
+class hangman():
+    def __init__(self,possible_word,word_to_find,lives,wrongly_guessed_letters,will_gussed_letter,turn_count,error_count,word_complition,possible_word_1):
+           self.possible_word=possible_word
+           self.word_to_find=word_to_find
+           self.lives=lives
+           self.wrongly_guessed_letters=wrongly_guessed_letters
+           self.will_gussed_letter=will_gussed_letter
+           self.turn_count=turn_count
+           self.error_count=error_count
+           self.word_complition=word_complition
+           self.possible_word_1=possible_word_1
+    def player(self,possible_words):
+     possible_words = ['becode', 'learning', 'mathematics', 'sessions']
+     word=random.choice(possible_words)
+     word_to_find = ' '
+     turns=10
+     while turns>0:
+      guess = input("Enter the letter:")
+      if guess not in word:
+          turns -= 1
+          print('bad guessed letter')
+      error_count=0
+
+      for char in possible_words[0]:
+       if char in word:
+         print(char,'well gussed letter')
+
+       else:
+         print('__')
+         error_count+=1
+       if error_count==0:
+         print('you gusse the word')
+         print("The word is: ", word)
+         break
+
+      print()
+      guess = input("Enter the letter:")
+      word_to_find+=guess
+      if guess not in word:
+         turns -=1
+      if turns == 0:
+       print("bad guess")
+     for char  in possible_words[1]:
+       if char in word:
+         print(char,'well gussed letter')
+
+       else:
+         print('__')
+         error_count+=1
+       if error_count==0:
+         print('you gusse the word')
+         print("The word is: ", word)
+         break
+
+     print()
+     guess = input("Enter the letter:")
+     word_to_find+=guess
+     if guess not in word:
+         turns -=1
+     if turns == 0:
+       print("bad guess")
+     for char  in possible_words[2]:
+       if char in word:
+         print(char,'well gussed letter')
+
+       else:
+         print('__')
+         error_count+=1
+       if error_count==0:
+         print('you gusse the word')
+         print("The word is: ", word)
+         break
+
+     print()
+     guess = input("Enter the letter:")
+     word_to_find+=guess
+     if guess not in word:
+         turns -=1
+     if turns == 0:
+       print("bad guess")
+     for char  in possible_words[3]:
+       if char in word:
+         print(char,'well gussed letter')
+
+       else:
+         print('__')
+         error_count+=1
+       if error_count==0:
+         print('you gusse the word')
+         print("The word is: ", word)
+         break
+
+     print()
+    guess = input("Enter the letter:")
+    word_to_find+=guess
+
+    player('self','possible_words')
+
+    def game_over(self):
+        if lives == 0:
+           print('game over')
+    game_over('self')
+    def well_played(self):
+      print('you find the correct word : {}in {turn_count}turns with {turn_errors}errors')
+    well_played('self')
