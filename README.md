@@ -34,7 +34,7 @@ the fifth one is to guess the fourth word (session).
 the sixth one  is to finish the game .
 the seventh one is to print that the player finish the game .
 
-4-after that I used the for loope to pass for each letter in the word and in this project I used it four times because I the player should guess four words .
+4-after that I used the for loope to pass for each letter in the word and in this project I used it four times because  the player should guess four words .
 
 and that's it .
 
